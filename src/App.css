@@ -1,0 +1,106 @@
+/* src/App.css */
+
+/* 1. UNIVERSAL RESET: CRUCIAL FOR FULL-SCREEN LAYOUT */
+/* This ensures padding and border are included *inside* the element's width, 
+   preventing horizontal overflow when using 100% width. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. GLOBAL HTML/BODY RESET */
+html {
+  width: 100%;
+}
+body {
+  margin: 0; 
+  padding: 0;
+  width: 100%;
+  /* Prevents the page from scrolling horizontally due to small overlaps */
+  overflow-x: hidden; 
+  
+  /* Applying base styles */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-color);
+}
+
+:root {
+  --primary-color: #007bff; /* AnyLogic blue */
+  --secondary-color: #f8f9fa; /* Light gray for sections */
+  --dark-color: #343a40;
+  --text-color: #495057;
+}
+
+/* 3. CONTAINER STYLES */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  /* Provides inner spacing for content */
+  padding: 0 40px; 
+}
+
+/* Header Styles */
+.header {
+  background-color: white;
+  border-bottom: 1px solid #e9ecef;
+  padding: 15px 0;
+  width: 100%; 
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.nav-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: var(--dark-color);
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Section Styles */
+.section {
+  padding: 80px 0;
+  width: 100%;
+  /* Ensures section wrappers respect the 100% width */
+  overflow: hidden; 
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2rem;
+  color: var(--dark-color);
+}
+
+/* Button Style */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
